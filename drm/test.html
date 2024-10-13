@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stream Input Form</title>
+</head>
+<body>
+
+<form id="streamForm">
+    <label for="url">URL:</label><br>
+    <input type="text" id="url" name="url" placeholder="ENTER DASH/HLS URL HERE"><br>
+    
+    <label for="keyid">KEY ID:</label><br>
+    <input type="text" id="keyid" name="keyid" placeholder="ENTER KEY ID HERE"><br><br>
+    
+    <label for="keyhex">KEY HEX:</label><br>
+    <input type="text" id="keyhex" name="keyhex" placeholder="ENTER KEY HEX HERE"><br><br>
+    
+    <input type="submit" value="TEST STREAM">
+</form>
+
+<script>
+document.getElementById('streamForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting in the traditional way
+    
+    // Get the values from the form fields
+    var url = document.getElementById('url').value;
+    var keyid = document.getElementById('keyid').value;
+    var keyhex = document.getElementById('keyhex').value;
+    
+    // Store the values in JavaScript variables
+    console.log('URL:', url);
+    console.log('KEY ID:', keyid);
+    console.log('KEY HEX:', keyhex);
+    
+    // You can now use these variables for further processing
+});
+</script>
+
+</body>
+</html>
